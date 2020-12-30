@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node",
+"class": "math",
+"language": "GDScript",
+"path": "res://Scripts/classes/math.gd"
+} ]
 _global_script_class_icons={
-
+"math": ""
 }
 
 [application]
