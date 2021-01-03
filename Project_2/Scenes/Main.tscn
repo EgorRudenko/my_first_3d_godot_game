@@ -25,10 +25,8 @@ near = 0.01
 script = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="Camera"]
-margin_left = 30.0
-margin_top = 45.8811
-margin_right = 970.0
-margin_bottom = 536.881
+margin_right = 1024.0
+margin_bottom = 600.0
 custom_fonts/font = SubResource( 1 )
 text = "You LOSE"
 align = 1
@@ -42,3 +40,7 @@ transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 0, 0, 0
 
 [node name="End" parent="." instance=ExtResource( 6 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8, -14 )
+[connection signal="lose" from="." to="Player" method="_on_lose"]
+[connection signal="lose" from="." to="." method="_on_lose"]
+[connection signal="win" from="." to="Player" method="_on_win"]
+[connection signal="win" from="." to="." method="_on_win"]
